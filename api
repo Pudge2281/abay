@@ -55,19 +55,19 @@
 
     <script>
         function getSettings() {
-            document.getElementById('response').value = 'Settings: {"key": "value"}';
+            document.getElementById('response').value = 'Настройки: { }';
         }
 
         function getStateInstance() {
-            document.getElementById('response').value = 'State: {"status": "active"}';
+            document.getElementById('response').value = 'Тити: { }{ }';
         }
 
         function sendMessage() {
-            document.getElementById('response').value = 'Message sent!';
+            document.getElementById('response').value = 'Сообщение отправлено';
         }
 
         function sendFileByUrl() {
-            document.getElementById('response').value = 'File sent!';
+            document.getElementById('response').value = 'Файл отправлен';
         }
     </script>
 </body>
