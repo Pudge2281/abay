@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN-API Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Гринапи</h1>
+
+    <label>ID Instance:</label>
+    <input type="text" id="idInstance" placeholder="Введите ID Instance">
+
+    <label>API Token Instance:</label>
+    <input type="text" id="apiTokenInstance" placeholder="Введите API Token Instance">
+
+    <button onclick="getSettings()">Get Settings</button>
+    <button onclick="getStateInstance()">Get State Instance</button>
+    <button onclick="sendMessage()">Send Message</button>
+    <button onclick="sendFileByUrl()">Send File by URL</button>
+
+    <h2>Сообщение:</h2>
+    <textarea id="response" readonly></textarea>
+
+    <script>
+        function getSettings() {
+            document.getElementById('response').value = 'Settings: {"key": "value"}';
+        }
+
+        function getStateInstance() {
+            document.getElementById('response').value = 'State: {"status": "active"}';
+        }
+
+        function sendMessage() {
+            document.getElementById('response').value = 'Message sent!';
+        }
+
+        function sendFileByUrl() {
+            document.getElementById('response').value = 'File sent!';
+        }
+    </script>
+</body>
+</html>
